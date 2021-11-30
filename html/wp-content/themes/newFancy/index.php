@@ -15,14 +15,19 @@
 </div>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+<div class="clase1">
+    <h2><a class="border" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
     <small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
-    <div class="entry">
-        <?php // the_content();
-        the_excerpt(); ?>
+    <div class="border">
+        <?php  // the_content();
+        the_excerpt();
+        //the_post_thumbnail();
+        ?>
     </div>
-    <p class="postmetadata"><?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?></p>
+
+    <!--<p class="postmetadata"><?php _e( 'Posted in' ); ?> <?php the_category( ', ' ); ?></p>-->
     </div> <!-- closes the first div box -->
+    <?php the_post_thumbnail();?>
 <?php endwhile; else : ?>
     <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>

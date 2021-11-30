@@ -46,3 +46,9 @@ body {
     left: 1500px;
     border: 3px solid #000000;
 }
+.border{
+    border: black 5px solid;
+}
+.clase1{
+    border: black 5px solid;
+}
