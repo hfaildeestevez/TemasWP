@@ -51,4 +51,9 @@ body {
 }
 .clase1{
     border: black 5px solid;
+    display: flex;
+    flex-direction: row;
 }
+
+
+
